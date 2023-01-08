@@ -1,4 +1,4 @@
-let res = ['_','_','_','_','_','_','_','_','_'];
+let res = ['_','_','_','_','_','_','_','_','_','_'];
 
 let quantStorage = "quantity";
 let resultStorage = "results";
@@ -6,7 +6,7 @@ let aliasStorage = "alias";
 
 let price = 0;  //replace *0
 let tel = "527421200205";
-let nPartidos = 9;
+let nPartidos = 10;
 let partidoSup = false;
 
 let quantity = localStorage.getItem(quantStorage);
@@ -150,7 +150,7 @@ function selection(element){ 		//Pinta la casilla y actualiza el texto de la qui
             res[index] += element.id.slice(0,1);
             res[index] = res[index].split('_').join('');
         }
-        element.style.backgroundColor = "rgb(250, 30, 30)";
+        element.style.backgroundColor = "rgb(10, 91, 132)";
     }
     else{
         if(combinations){
@@ -226,7 +226,7 @@ function save(){				//Se añade la quiniela actual a la lista
 }
 
 function clean(){				//Boton para limpiar la quinela
-    res = ['_','_','_','_','_','_','_','_','_']
+    res = ['_','_','_','_','_','_','_','_','_','_']
     let container = document.getElementById("text");
     container.innerHTML = res.join("\xa0\xa0");
     spans = document.querySelectorAll(".quiniela span");
@@ -288,7 +288,7 @@ function random(){
     let partidos = document.getElementsByClassName("partido");
     for (var i = 0; i < nPartidos; i++){
         var r = getRandomInt(0,2);
-        partidos[i].getElementsByTagName("span")[r].style.backgroundColor = "rgb(250, 30, 30)";
+        partidos[i].getElementsByTagName("span")[r].style.backgroundColor = "rgb(10, 91, 132)";
         res[i] = ["L","E","V"][r];
     }
     container.innerHTML = res.join("\xa0\xa0");
